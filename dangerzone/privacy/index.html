@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DangerZone: Privacy Policy — dottorquato</title>
+<meta name="description" content="DangerZone privacy policy, English and Italian.">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="crumb"><a href="/">dottorquato</a> / <a href="/dangerzone/">DangerZone</a> / Privacy policy</nav>
+
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button type="button" id="btn-en" aria-pressed="true">English</button>
+    <button type="button" id="btn-it" aria-pressed="false">Italiano</button>
+  </div>
+
+  <div class="policy-text" id="policy-en" lang="en">
+    <h1>DangerZone: Privacy Policy</h1>
+    <p>Last updated: 22 September 2026</p>
+
+    <p>DangerZone ("the app") is published by Dr. Torquato (dottorquato). You can write to us at <a href="mailto:torquyme@gmail.com">torquyme@gmail.com</a>.</p>
+
+    <h2>In short</h2>
+    <ul>
+      <li>The app has no login screen, no name, email address or phone number of yours. It signs you into an anonymous account on first launch, so your reports and votes can be told apart from everyone else's without knowing who you are.</li>
+      <li>What you report is shared: it is visible to everyone nearby using the app, not just you.</li>
+      <li>Your live location is never stored or sent anywhere. Only when you choose to send a report is a position sent: the coordinates of that report.</li>
+      <li>Google's Firebase service stores and serves this shared data on our behalf, in the EU (region <code>eur3</code>). We do not run our own servers.</li>
+      <li>The map is Google Maps. Loading it sends some technical data to Google, as does the shared-reports connection.</li>
+    </ul>
+
+    <h2>What you send when you use the app</h2>
+    <p>When you send a report, three things are sent together, tied to your anonymous account: the report itself, a small record that limits how often you can report, and, from then on, your votes and abuse flags on any report.</p>
+
+    <p><strong>A report</strong> contains:</p>
+    <ul>
+      <li>the type of hazard and how serious you said it is;</li>
+      <li>the text you typed in "Add details", if any — this is shown to other people, so do not put anything in it you would not want strangers to read;</li>
+      <li>the coordinates of the place you reported (your position, or the spot you chose on the map);</li>
+      <li>when the report was made and when it expires;</li>
+      <li>your anonymous account id, as the report's author;</li>
+      <li>an approximate location code (a "geohash") derived from the coordinates, used only to find reports near a person efficiently.</li>
+    </ul>
+
+    <p><strong>Still there / No longer there</strong> on someone else's report sends a vote (which of the two, and when) tied to your anonymous account id, and raises a counter on that report. One vote per report per account.</p>
+
+    <p><strong>Report this warning</strong> sends an abuse flag: the reason you picked, and your anonymous account id. It is visible only to you and to us — not to the report's author or to anyone else — and raises a counter on the report. One flag per report per account.</p>
+
+    <p><strong>Sending any report</strong> also updates a small record under your own account: when you last reported and how many times today, so the app can enforce "at most one report every 30 seconds, and 20 a day." This record holds no report content, only timestamps and counts.</p>
+
+    <p>The app also remembers, on your phone only, the language you picked in Settings, and which of these you have voted or flagged, so it does not offer the same choice twice.</p>
+
+    <h2>Who can see it</h2>
+    <p>Anyone using the app nearby can see an active report's type, severity, description, location and how many "Still there" / "No longer there" votes it has — this is what "shared" means. Your anonymous account id travels with the report as its author, but it is not a name and cannot be turned into one. Nobody, including us, can use it to find out who you are.</p>
+    <p>Your individual votes and abuse flags are private: only you (and, for flags, us, if we need to look into a report) can see which reports you voted on or flagged.</p>
+
+    <h2>Your location</h2>
+    <p>The app asks for permission to use your location, precise or approximate. It uses it to:</p>
+    <ul>
+      <li>work out which hazards are near you, and how far away and in which direction they are;</li>
+      <li>show where you are on the map and centre the map on you;</li>
+      <li>place a report where you are, or nearby, if you choose to send one.</li>
+    </ul>
+    <p>Your location is used only while the app is open. The app does not ask for background location and does not read your position when it is closed. Your live position is not stored or sent anywhere, and the app does not keep a history of where you have been. The only place a position is ever sent is inside a report you choose to send, as the location of that report — and, briefly, as the approximate area your phone is asking to see reports in (see "The shared reports service" below).</p>
+    <p>You can refuse or withdraw the location permission in your phone's settings. The app still works: you can look at the map and browse nearby hazards. Sending a report needs a location fix, so that no report can be placed somewhere you cannot vouch for — with location off, reporting is unavailable until you turn it back on.</p>
+    <p>On Android, the app asks for the location permissions (precise and approximate) and for network access (to load the map and reach the shared reports). On iPhone, it asks for location "While Using the App".</p>
+
+    <h2>The shared reports service</h2>
+    <p>Reports, votes and flags are stored in Cloud Firestore, part of Google's Firebase, under our own project. To read or send any of this, your phone connects to Google's Firestore service and, among other things, asks for reports in the area you are looking at (as the geohash code mentioned above, not your exact position). Google's infrastructure receives the technical data any such connection needs — your IP address and a Firebase installation identifier — to operate the connection; we do not separately collect or see this. Google's own privacy policy covers what Google itself does with it: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+
+    <p><strong>How long we keep it.</strong> A report is deleted automatically some time after it expires — usually promptly, guaranteed within about a day. When a report is deleted, its votes and flags stop being reachable through the app; we clear out what is left of them from time to time. Your own rate-limit record (last report time, today's count) is never deleted while the account exists, because deleting it would reset your daily limit — it holds no report content.</p>
+
+    <p><strong>Reporting abuse.</strong> "Report this warning" sends a private note to us about a report you think is wrong, offensive or against the rules. We use it to decide whether to remove a report; we do not tell the report's author who flagged it, and we cannot connect the flag to a real name.</p>
+
+    <h2>The map</h2>
+    <p>The map comes from Google Maps, through Google's Maps software development kit. To draw the map, your phone connects to Google and asks for the map of the area you are looking at, so Google can tell roughly which area you are viewing. According to Google, the Maps SDK also collects technical data such as your IP address, device metadata (for example device model and operating system version), a pseudonymous identifier of the SDK, crash reports, and map interactions such as panning and zooming. Google uses this data under its own privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+    <p>We do not separately receive this data from Google.</p>
+
+    <h2>What we do not do</h2>
+    <ul>
+      <li>We do not ask you to create an account with a name, email address or phone number. The account the app makes for you is anonymous.</li>
+      <li>We do not show ads.</li>
+      <li>We do not use analytics or advertising tools of our own, and we do not track you across other apps or websites.</li>
+      <li>We do not sell your data.</li>
+      <li>The app does not send notifications.</li>
+    </ul>
+
+    <h2>Deleting your data</h2>
+    <p><strong>Remove my report</strong>, on the detail page of a report you made, ends it immediately — that works at any time, for any report you sent, without contacting us. For anything else — a vote or a flag you want removed, or your rate-limit record — write to <a href="mailto:torquyme@gmail.com">torquyme@gmail.com</a>. Because your account is anonymous, we cannot look it up by name; tell us roughly when and where you used the app so we can find the right records.</p>
+    <p>Uninstalling the app, or clearing its storage in your phone's settings, deletes your language choice and the local record of what you have voted on. It does not delete reports you already sent, or your account on Google's Firebase service: those live until the report expires and is purged, or until you ask us to remove them.</p>
+
+    <h2>Your choices and rights</h2>
+    <p>You can turn location off at any time, in your phone's settings (see "Your location"). You can remove any report you made yourself, at any time, from its own page. For anything else you'd like changed or deleted, write to <a href="mailto:torquyme@gmail.com">torquyme@gmail.com</a> — see "Deleting your data" above. For the technical data Google's own services receive when you use the map or the shared reports service, read Google's privacy policy, linked above.</p>
+
+    <h2>Children</h2>
+    <p>The app is not designed for children, and we do not knowingly collect data from anyone.</p>
+
+    <h2>Emergencies</h2>
+    <p>DangerZone is not an emergency service. It does not contact emergency services on your behalf, and reports can be wrong or out of date. The "Call emergency services" button on an Emergency-level hazard only opens your phone's own dialer with a number filled in — it never places a call for you, and no report data is sent by pressing it. In an emergency, call your local emergency number first.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If a future version of the app handles data differently, we will update this policy before that version is released and change the date at the top.</p>
+
+    <h2>Contact</h2>
+    <p>Dr. Torquato (dottorquato)<br>
+    <a href="mailto:torquyme@gmail.com">torquyme@gmail.com</a></p>
+  </div>
+
+  <div class="policy-text" id="policy-it" lang="it" hidden>
+    <p class="placeholder">Bozza tradotta automaticamente, non ancora rivista da un madrelingua. Pubblicata così com'è in attesa di revisione. / Machine-translated draft, not yet reviewed by a native speaker. Published as-is pending review.</p>
+
+    <h1>DangerZone: Informativa sulla privacy</h1>
+    <p>Ultimo aggiornamento: 22 settembre 2026</p>
+
+    <p>DangerZone ("l'app") è pubblicata da Dr. Torquato (dottorquato). Puoi scriverci a <a href="mailto:torquyme@gmail.com">torquyme@gmail.com</a>.</p>
+
+    <h2>In breve</h2>
+    <ul>
+      <li>L'app non ha una schermata di accesso, né il tuo nome, indirizzo email o numero di telefono. Al primo avvio ti accede con un account anonimo, così le tue segnalazioni e i tuoi voti possono essere distinti da quelli di chiunque altro senza sapere chi sei.</li>
+      <li>Ciò che segnali è condiviso: è visibile a chiunque nelle vicinanze usi l'app, non solo a te.</li>
+      <li>La tua posizione in tempo reale non viene mai salvata né inviata da nessuna parte. Solo quando scegli di inviare una segnalazione viene inviata una posizione: le coordinate di quella segnalazione.</li>
+      <li>Il servizio Firebase di Google salva e distribuisce questi dati condivisi per nostro conto, nell'UE (regione <code>eur3</code>). Non gestiamo server nostri.</li>
+      <li>La mappa è Google Maps. Caricarla invia alcuni dati tecnici a Google, così come la connessione al servizio di segnalazioni condivise.</li>
+    </ul>
+
+    <h2>Cosa invii quando usi l'app</h2>
+    <p>Quando invii una segnalazione, vengono inviate insieme tre cose, legate al tuo account anonimo: la segnalazione stessa, un piccolo record che limita quante volte puoi segnalare, e, da quel momento, i tuoi voti e le tue segnalazioni di abuso su qualsiasi segnalazione.</p>
+
+    <p><strong>Una segnalazione</strong> contiene:</p>
+    <ul>
+      <li>il tipo di pericolo e la gravità che hai indicato;</li>
+      <li>il testo che hai scritto in "Aggiungi dettagli", se ce n'è — viene mostrato ad altre persone, quindi non scriverci nulla che non vorresti far leggere a estranei;</li>
+      <li>le coordinate del punto segnalato (la tua posizione, o il punto che hai scelto sulla mappa);</li>
+      <li>quando è stata fatta la segnalazione e quando scade;</li>
+      <li>il tuo id account anonimo, come autore della segnalazione;</li>
+      <li>un codice di posizione approssimativa ("geohash") calcolato dalle coordinate, usato solo per trovare in modo efficiente le segnalazioni vicine a una persona.</li>
+    </ul>
+
+    <p><strong>C'è ancora / Non c'è più</strong> sulla segnalazione di qualcun altro invia un voto (quale dei due, e quando) legato al tuo id account anonimo, e fa salire un contatore su quella segnalazione. Un voto per segnalazione per account.</p>
+
+    <p><strong>Segnala questa segnalazione</strong> invia una segnalazione di abuso: il motivo che hai scelto e il tuo id account anonimo. È visibile solo a te e a noi — non all'autore della segnalazione né a chiunque altro — e fa salire un contatore sulla segnalazione. Una segnalazione di abuso per segnalazione per account.</p>
+
+    <p><strong>Ogni invio di una segnalazione</strong> aggiorna anche un piccolo record legato al tuo account: quando hai segnalato l'ultima volta e quante volte oggi, così l'app può far rispettare il limite di "al massimo una segnalazione ogni 30 secondi, e 20 al giorno". Questo record non contiene il testo delle segnalazioni, solo orari e conteggi.</p>
+
+    <p>L'app ricorda anche, solo sul tuo telefono, la lingua che hai scelto nelle Impostazioni e su quali di queste hai già votato o segnalato, così non ti propone due volte la stessa scelta.</p>
+
+    <h2>Chi può vederlo</h2>
+    <p>Chiunque usi l'app nelle vicinanze può vedere il tipo, la gravità, la descrizione, la posizione e quanti voti "C'è ancora" / "Non c'è più" ha una segnalazione attiva — è questo che significa "condiviso". Il tuo id account anonimo viaggia insieme alla segnalazione come suo autore, ma non è un nome e non può diventarlo. Nessuno, noi compresi, può usarlo per scoprire chi sei.</p>
+    <p>I tuoi singoli voti e le tue segnalazioni di abuso sono privati: solo tu (e, per le segnalazioni di abuso, noi, se dobbiamo esaminare una segnalazione) potete vedere su quali segnalazioni hai votato o quali hai segnalato.</p>
+
+    <h2>La tua posizione</h2>
+    <p>L'app chiede il permesso di usare la tua posizione, precisa o approssimativa. La usa per:</p>
+    <ul>
+      <li>capire quali pericoli sono vicini a te, a che distanza e in quale direzione;</li>
+      <li>mostrare dove ti trovi sulla mappa e centrare la mappa su di te;</li>
+      <li>inserire una segnalazione nel punto in cui ti trovi, o vicino ad esso, se scegli di inviarne una.</li>
+    </ul>
+    <p>La posizione viene usata solo mentre l'app è aperta. L'app non chiede la posizione in background e non legge la tua posizione quando è chiusa. La tua posizione in tempo reale non viene salvata né inviata da nessuna parte, e l'app non tiene uno storico dei luoghi in cui sei stato. L'unico caso in cui una posizione viene inviata è dentro una segnalazione che scegli di inviare, come posizione di quella segnalazione — e, brevemente, come area approssimativa per cui il telefono chiede le segnalazioni presenti (vedi "Il servizio di segnalazioni condivise" più sotto).</p>
+    <p>Puoi rifiutare o revocare il permesso di posizione dalle impostazioni del telefono. L'app continua a funzionare: puoi guardare la mappa e vedere i pericoli vicini. Per inviare una segnalazione serve una posizione rilevata, così nessuna segnalazione può essere collocata in un punto che non puoi garantire — con la posizione disattivata, non è possibile segnalare finché non la riattivi.</p>
+    <p>Su Android l'app richiede i permessi di posizione (precisa e approssimativa) e l'accesso alla rete (per caricare la mappa e raggiungere le segnalazioni condivise). Su iPhone richiede la posizione "Mentre usi l'app".</p>
+
+    <h2>Il servizio di segnalazioni condivise</h2>
+    <p>Segnalazioni, voti e segnalazioni di abuso sono salvati in Cloud Firestore, parte di Firebase di Google, nel nostro progetto. Per leggere o inviare uno qualsiasi di questi dati, il telefono si collega al servizio Firestore di Google e, tra le altre cose, chiede le segnalazioni nella zona che stai guardando (come il codice geohash citato sopra, non la tua posizione esatta). L'infrastruttura di Google riceve i dati tecnici necessari a questa connessione — il tuo indirizzo IP e un identificativo di installazione Firebase — per farla funzionare; noi non li raccogliamo né li vediamo separatamente. L'informativa sulla privacy di Google copre cosa fa Google stessa con questi dati: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+
+    <p><strong>Per quanto tempo li conserviamo.</strong> Una segnalazione viene cancellata automaticamente qualche tempo dopo la sua scadenza — di solito rapidamente, comunque entro circa un giorno. Quando una segnalazione viene cancellata, i suoi voti e le sue segnalazioni di abuso smettono di essere raggiungibili tramite l'app; ripuliamo periodicamente ciò che ne resta. Il tuo record del limite di frequenza (ultimo orario di segnalazione, conteggio di oggi) non viene mai cancellato finché l'account esiste, perché cancellarlo azzererebbe il tuo limite giornaliero — non contiene il testo di alcuna segnalazione.</p>
+
+    <p><strong>Segnalare un abuso.</strong> "Segnala questa segnalazione" ci invia una nota privata su una segnalazione che ritieni sbagliata, offensiva o contraria alle regole. La usiamo per decidere se rimuovere una segnalazione; non diciamo all'autore chi l'ha segnalata, e non possiamo collegare la segnalazione di abuso a un nome reale.</p>
+
+    <h2>La mappa</h2>
+    <p>La mappa proviene da Google Maps, tramite il kit di sviluppo (SDK) di Google Maps. Per disegnarla, il tuo telefono si collega a Google e chiede la mappa della zona che stai guardando: così Google può capire, più o meno, quale zona stai visualizzando. Secondo Google, l'SDK di Google Maps raccoglie anche dati tecnici come l'indirizzo IP, i metadati del dispositivo (per esempio modello e versione del sistema operativo), un identificativo pseudonimo dell'SDK, le segnalazioni di arresto anomalo e le interazioni con la mappa, come spostamenti e zoom. Google usa questi dati secondo la propria informativa sulla privacy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+    <p>Noi non riceviamo separatamente questi dati da Google.</p>
+
+    <h2>Cosa non facciamo</h2>
+    <ul>
+      <li>Non ti chiediamo di creare un account con nome, indirizzo email o numero di telefono. L'account che l'app crea per te è anonimo.</li>
+      <li>Non mostriamo pubblicità.</li>
+      <li>Non usiamo strumenti di statistica o pubblicitari nostri e non ti tracciamo su altre app o siti web.</li>
+      <li>Non vendiamo i tuoi dati.</li>
+      <li>L'app non invia notifiche.</li>
+    </ul>
+
+    <h2>Cancellare i tuoi dati</h2>
+    <p><strong>Rimuovi la mia segnalazione</strong>, nella pagina dei dettagli di una segnalazione che hai fatto, la termina immediatamente — funziona in qualsiasi momento, per qualsiasi segnalazione tu abbia inviato, senza contattarci. Per qualsiasi altra cosa — un voto o una segnalazione di abuso che vuoi rimuovere, o il tuo record del limite di frequenza — scrivi a <a href="mailto:torquyme@gmail.com">torquyme@gmail.com</a>. Poiché il tuo account è anonimo, non possiamo cercarlo per nome: dicci indicativamente quando e dove hai usato l'app, così possiamo trovare i record giusti.</p>
+    <p>Disinstallare l'app, o cancellarne i dati dalle impostazioni del telefono, cancella la lingua scelta e il record locale di ciò su cui hai votato. Non cancella le segnalazioni che hai già inviato, né il tuo account sul servizio Firebase di Google: quelli restano finché la segnalazione scade e viene eliminata, o finché non ci chiedi di rimuoverli.</p>
+
+    <h2>Le tue scelte e i tuoi diritti</h2>
+    <p>Puoi disattivare la posizione in qualsiasi momento, nelle impostazioni del telefono (vedi "La tua posizione"). Puoi rimuovere in qualsiasi momento una segnalazione che hai fatto tu, dalla sua stessa pagina. Per qualsiasi altra cosa che vuoi cambiare o cancellare, scrivi a <a href="mailto:torquyme@gmail.com">torquyme@gmail.com</a> — vedi "Cancellare i tuoi dati" sopra. Per i dati tecnici che i servizi di Google ricevono quando usi la mappa o il servizio di segnalazioni condivise, leggi l'informativa di Google indicata sopra.</p>
+
+    <h2>Minori</h2>
+    <p>L'app non è pensata per i bambini e non raccogliamo consapevolmente dati da nessuno.</p>
+
+    <h2>Emergenze</h2>
+    <p>DangerZone non è un servizio di emergenza. Non contatta i servizi di emergenza per conto tuo, e le segnalazioni possono essere sbagliate o non più aggiornate. Il pulsante "Chiama i soccorsi" su un pericolo di livello Emergenza apre solo il tastierino del tuo telefono con un numero già inserito — non effettua mai una chiamata al posto tuo, e premerlo non invia alcun dato di segnalazione. In caso di emergenza, chiama prima il numero di emergenza del tuo Paese.</p>
+
+    <h2>Modifiche a questa informativa</h2>
+    <p>Se una versione futura dell'app tratterà i dati in modo diverso, aggiorneremo questa informativa prima del rilascio di quella versione e cambieremo la data in alto.</p>
+
+    <h2>Contatti</h2>
+    <p>Dr. Torquato (dottorquato)<br>
+    <a href="mailto:torquyme@gmail.com">torquyme@gmail.com</a></p>
+  </div>
+
+  <footer class="site-footer">
+    <p>Contact: <a href="mailto:torquyme@gmail.com">torquyme@gmail.com</a></p>
+  </footer>
+</div>
+<script src="/dangerzone/privacy/lang-toggle.js"></script>
+</body>
+</html>
