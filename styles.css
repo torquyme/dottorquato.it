@@ -128,9 +128,7 @@ hr.rule {
 
 .screenshots img {
   width: 144px;
-  height: 365px;
-  object-fit: contain;
-  background: var(--paper);
+  height: auto;
   border-radius: 8px;
   border: 1px solid var(--contour);
 }
