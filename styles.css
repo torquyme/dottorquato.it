@@ -127,8 +127,10 @@ hr.rule {
 }
 
 .screenshots img {
-  width: 140px;
-  height: auto;
+  width: 144px;
+  height: 365px;
+  object-fit: contain;
+  background: var(--paper);
   border-radius: 8px;
   border: 1px solid var(--contour);
 }
