@@ -1,6 +1,6 @@
 # Prompt: dottorquato.it portfolio site
 
-Paste this whole file as a prompt to build Dr. Torquato's (dottorquato) personal portfolio website. It has two jobs: (1) be a small, calm portfolio listing DangerZone as a project, and (2) host DangerZone's privacy policy at a stable public URL, since Google Play and Apple App Store both require one. No backend, no build step required — plain HTML/CSS, a page or two of vanilla JS at most (language toggle, nothing else). Plan is to host it on GitHub Pages at the custom domain `dottorquato.it`.
+Paste this whole file as a prompt to build Torquato Ruggiero's (dottorquato) personal portfolio website. It has two jobs: (1) be a small, calm portfolio listing DangerZone as a project, and (2) host DangerZone's privacy policy at a stable public URL, since Google Play and Apple App Store both require one. No backend, no build step required — plain HTML/CSS, a page or two of vanilla JS at most (language toggle, nothing else). Plan is to host it on GitHub Pages at the custom domain `dottorquato.it`.
 
 ## What to build
 
@@ -55,7 +55,7 @@ Same requirements as a standalone privacy page: readable on a phone (most visito
 
 Last updated: 22 September 2026
 
-DangerZone ("the app") is published by Dr. Torquato (dottorquato). You can write to us at torquyme@gmail.com.
+DangerZone ("the app") is published by Torquato Ruggiero (dottorquato). You can write to us at torquyme@gmail.com.
 
 ## In short
 
@@ -140,7 +140,7 @@ You can turn location off at any time, in your phone's settings (see "Your locat
 
 ## Children
 
-The app is not designed for children, and we do not knowingly collect data from anyone.
+The app is not directed at children under 13, and we do not knowingly collect data from anyone under that age.
 
 ## Emergencies
 
@@ -150,24 +150,28 @@ DangerZone is not an emergency service. It does not contact emergency services o
 
 If a future version of the app handles data differently, we will update this policy before that version is released and change the date at the top.
 
+## Data breach notification
+
+If a data breach affecting your data occurs, we will notify you in accordance with applicable law, including what happened and what we are doing about it.
+
 ## Contact
 
-Dr. Torquato (dottorquato)
+Torquato Ruggiero (dottorquato)
 torquyme@gmail.com
 ```
 
-## Italian text (verbatim — machine-translated draft, not yet reviewed by a native speaker; publish as-is for now, flag that a review is pending)
+## Italian text (verbatim)
 
 ```markdown
 # DangerZone: Informativa sulla privacy
 
 Ultimo aggiornamento: 22 settembre 2026
 
-DangerZone ("l'app") è pubblicata da Dr. Torquato (dottorquato). Puoi scriverci a torquyme@gmail.com.
+DangerZone ("l'app") è pubblicata da Torquato Ruggiero (dottorquato). Puoi scriverci a torquyme@gmail.com.
 
 ## In breve
 
-- L'app non ha una schermata di accesso, né il tuo nome, indirizzo email o numero di telefono. Al primo avvio ti accede con un account anonimo, così le tue segnalazioni e i tuoi voti possono essere distinti da quelli di chiunque altro senza sapere chi sei.
+- L'app non ha una schermata di accesso, né il tuo nome, indirizzo email o numero di telefono. Al primo avvio ti fa accedere con un account anonimo, così le tue segnalazioni e i tuoi voti possono essere distinti da quelli di chiunque altro senza sapere chi sei.
 - Ciò che segnali è condiviso: è visibile a chiunque nelle vicinanze usi l'app, non solo a te.
 - La tua posizione in tempo reale non viene mai salvata né inviata da nessuna parte. Solo quando scegli di inviare una segnalazione viene inviata una posizione: le coordinate di quella segnalazione.
 - Il servizio Firebase di Google salva e distribuisce questi dati condivisi per nostro conto, nell'UE (regione `eur3`). Non gestiamo server nostri.
@@ -248,7 +252,7 @@ Puoi disattivare la posizione in qualsiasi momento, nelle impostazioni del telef
 
 ## Minori
 
-L'app non è pensata per i bambini e non raccogliamo consapevolmente dati da nessuno.
+L'app non è rivolta a bambini sotto i 13 anni, e non raccogliamo consapevolmente dati da chi ha meno di quell'età.
 
 ## Emergenze
 
@@ -258,9 +262,13 @@ DangerZone non è un servizio di emergenza. Non contatta i servizi di emergenza 
 
 Se una versione futura dell'app tratterà i dati in modo diverso, aggiorneremo questa informativa prima del rilascio di quella versione e cambieremo la data in alto.
 
+## Notifica di violazione dei dati
+
+In caso di violazione dei dati che ti riguarda, ti informeremo secondo quanto previsto dalla legge applicabile, spiegando cosa è successo e quali misure stiamo adottando.
+
 ## Contatti
 
-Dr. Torquato (dottorquato)
+Torquato Ruggiero (dottorquato)
 torquyme@gmail.com
 ```
 
