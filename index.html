@@ -4,33 +4,62 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>dottorquato</title>
-<meta name="description" content="Dr. Torquato's personal portfolio.">
-<link rel="stylesheet" href="/styles.css">
+<meta name="description" content="Torquato Ruggiero's personal portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<link rel="stylesheet" href="/home.css">
 </head>
 <body>
-<div class="wrap">
-  <header class="site-header">
-    <p class="tagline">Software engineer. Consultant. I build things with AI, and try to make them useful.</p>
-  </header>
+<div class="page">
 
-  <section id="about">
-    <h2>About</h2>
-    <p>I'm Torquato Ruggiero, a software engineer working as a consultant. I enjoy experimenting with AI, and outside client work I set up small projects meant to be genuinely useful to people — DangerZone is the first one live.</p>
-  </section>
+  <aside class="rail">
+    <div>
+      <p class="name">torquato<br>ruggiero</p>
+      <p class="role">Engineer. Consultant.</p>
+    </div>
+    <div>
+      <p class="contact-label">Say hello</p>
+      <a class="plain-link" href="mailto:torquyme@gmail.com">torquyme@gmail.com</a>
+    </div>
+    <p class="privacy-note">No analytics run on this page. If you're reading this, that's between your browser and mine.</p>
+  </aside>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul class="projects-list">
-      <li class="project-card">
-        <h3><a href="/dangerzone/">DangerZone</a></h3>
-        <p>DangerZone — a map that shows hazards other people nearby have reported, and lets you report one yourself.</p>
-      </li>
-    </ul>
-  </section>
+  <main class="content">
 
-  <footer class="site-footer">
-    <p>Contact: <a href="mailto:torquyme@gmail.com">torquyme@gmail.com</a></p>
-  </footer>
+    <p class="epigraph">I build small, useful software. This page is a record of what's actually shipped.</p>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <h3><a class="title-link" href="/dangerzone/">DangerZone</a></h3>
+        <hr class="rule">
+        <p>A map of hazards other people nearby have reported — flooding, road hazards, dangerous animals — and a way to report one yourself. Reports are anonymous, and expire on their own unless someone confirms they're still there.</p>
+        <dl class="spec">
+          <div><dt>Status</dt><dd class="status-live">Live</dd></div>
+          <div><dt>Built with</dt><dd>Flutter, Firebase</dd></div>
+          <div><dt>Reports</dt><dd>Anonymous, self-expiring</dd></div>
+        </dl>
+        <a class="plain-link" href="/dangerzone/">Read more about DangerZone</a>
+      </article>
+
+      <hr class="sep">
+
+      <article class="project project-placeholder">
+        <h3>[Next project]</h3>
+        <p>Not public yet — check back.</p>
+      </article>
+    </section>
+
+    <hr class="sep">
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I'm a software engineer working as a consultant. Outside client work I build small tools I actually want to exist — DangerZone is the first one live.</p>
+    </section>
+
+  </main>
+
 </div>
 </body>
 </html>
